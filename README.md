@@ -23,6 +23,35 @@ Lastly, we take a look at the research that gives the foundation to our research
 
 Overall, the literature review has shown that many academic papers tackle the issue of greenwashing. To understand the dimension of false claims, these papers mainly focus on the term definition of greenwashing. As there is no clear statement of what practices and wording includes, this term must be consistently adapted due to changing social and technical norms. On the other hand, industry example has shown that there is an increasing demand in order detect and use those claims for the greater good of society when banking decisions investments are made.
 
+# EDA
+For all the results that follow, these have been created and taken from the following file: ML_EDA.ipynb
+
+In this section, we present the key takeaways obtained from our EDA.
+
+1. As can be observed in the image below, the training data set is quite unbalanced in terms of labelled=0 and labelled=1 data. Therefore, working on the dataset will also be key on achieving the best prediction metrics. The same observation can be made for the testing data set.
+
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/f2ae0a7b-e461-4fa4-82f9-d60a5d5e6879"> <br>
+
+2. Through a targeted analysis of environmental claims and the use of a selective tokenizer to remove insignificant words, we identified recurring buzzwords associated with environmental claims. The top three “buzzwords”, namely "energy," "environmental," and "reduce," are the most present words in these sentences. As a result, it is plausible that sentences containing these buzzwords in our testing set have a higher likelihood of being classified as environmental claims by our further predictive models.
+
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/0ba6d398-6507-4b43-b90d-33f319387fa3"> <br>
+
+3. When looking at informations about years within environmental claims, the main observation are: 
+
+- 2015, 2019 and 2020 show a relative peak in environmental claims. 2015 is likely to be due to thh year of the Paris Agreement, meaning several claims where either made in that time or refer to that year within their statement. In terms of the rise in the year 2019 and 2020, it is likely to be mentioned more often due to the time period when the dataset was fed with claims.
+- Years that lay in the future are likely to come from claims that state information about future targets. Such claims may outline plans, strategies, or commitments that organizations or individuals aim to achieve in the future (e.g,, 2030 emissions target)
+
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/b25c01e0-6bc9-419c-82de-22e4cb624e11"> <br>
+
+
+4. When selecting the claims that are coming from a specific company, the following observations can be made: 
+- The company is not determining if a claim is labels as environmental or not as we find both labels within claims from the same company.
+- We only have the company's name for a minority of the claims (125/2400). 
+
+
+
+
+
 
 
 # Performance of models
