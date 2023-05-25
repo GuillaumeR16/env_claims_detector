@@ -36,8 +36,7 @@ Disclaimer: among the different models used for predicting environmental claims,
 The tables presented below display the performance scores for each model.
 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d5b30941-81c9-4cab-b7c1-740f2d48f6c4">
-
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d5b30941-81c9-4cab-b7c1-740f2d48f6c4"> <br>
 
 
 
