@@ -24,7 +24,7 @@ Lastly, we take a look at the research that gives the foundation to our research
 Overall, the literature review has shown that many academic papers tackle the issue of greenwashing. To understand the dimension of false claims, these papers mainly focus on the term definition of greenwashing. As there is no clear statement of what practices and wording includes, this term must be consistently adapted due to changing social and technical norms. On the other hand, industry example has shown that there is an increasing demand in order detect and use those claims for the greater good of society when banking decisions investments are made.
 
 # EDA
-For all the results that follow, these have been created and taken from the following file: ML_EDA.ipynb
+For all the results that follow, these have been created and taken from the following file: EDA.ipynb
 
 In this section, we present the key takeaways obtained from our EDA.
 
