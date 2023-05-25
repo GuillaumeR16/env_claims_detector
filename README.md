@@ -31,7 +31,21 @@ To sum up, when we examine which models would be the most suitable for analyzing
 
 Now let’s look at the numbers!
 
-Disclaimer: among the different models used for predicting environmental claims, the one implemented with the GPT3 davinci model stands out as the best performer in terms of accuracy, precision, and recall, with respectively 90%, 73,61% and 82%. However, the analysis in this model and the ada model will be deferred to a later stage, as they were not constructed from scratch but rather sourced from diverse resources towards the end of our project. In the beginning we want assess and comment the performances of more “in-house” that we have built and fine-tuned. Hence, our initial focus will be directed towards the examination of the following models: BOW, TF-IDF, Doc2Vec, Word2Vec, and DistilBERT. Furthermore, all of these models have been evaluated using the following classification methods: Logistic Regression, KNN, Decision Tree, and Random Forest. In the end, we have 20 models to analyze. Every model has been fined-tuned. This code and the fine-tuning of all the models are present in the following notebook: XXXX.ipynb
+Disclaimer: among the different models used for predicting environmental claims, the one implemented with the GPT3 davinci model stands out as the best performer in terms of accuracy, precision, and recall, with respectively 90%, 73,61% and 82%. However, the analysis in this model and the ada model will be deferred to a later stage, as they were not constructed from scratch but rather sourced from diverse resources towards the end of our project. In the beginning we want assess and comment the performances of more “in-house” that we have built and fine-tuned. Hence, our initial focus will be directed towards the examination of the following models: 
+- BOW
+-  TF-IDF
+-  Doc2Vec
+-  Word2Vec
+-  and DistilBERT. 
+  
+Furthermore, all of these models have been evaluated using the following classification methods: 
+- Logistic Regression
+- KNN
+- Decision Tree 
+- and Random Forest
+
+
+In the end, we have a total of 20 models to analyze, each with three performance metrics. All of the models have undergone fine-tuning. You can find the code and details of the fine-tuning process for all the models in the following notebook: XXXX.ipynb.
 
 The tables presented below display the performance scores for each model.
 
@@ -49,13 +63,28 @@ First, upon analyzing the results, an intriguing observation emerges: models bas
 -	Focusing solely on the results from the Word2vec vectorizer, we can see that the results are very low compared to the other vectorizers, and this is true across all classification methods. Even the Word2Vec-Decision Tree combination yields accuracy equivalent to the default rate, meaning that the model predicts all sentences as non-environmental claims. This outcome is reflected in the confusion matrix presented below: 
 
 
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/4767f97b-d688-4b65-9bad-3983990e7f35">
+
 The precision and recall metrics are calculated based on the number of True Positives predicted by the model. Since all sentences are labeled as 0, it is expected to observe both these metrics equal to 0. 
 
 Why does this model exhibit inferior performance compared to the others? Our analysis suggests two potential explanations.
 
-o	Word2vec, through its vectorization technique, generates a vector for each word and then calculates the average of all these vectors to position the entire sentence in space. Consequently, when a sentence contains words typically associated with environmental claims, their influence on the final placement is significantly diminished since the average of all words in the sentence is taken. As a result, the sentence's position remains anchored at an average level and fails to gravitate towards that of environmental claims.
-o	The second possible reason, as discussed with Prof. Valchos, is that this method may not capture and vectorize all the words effectively. In such cases, if the identified and vectorized words in the sentence happen to be stopwords, there is no opportunity for the entire sentence to be associated with an environmental claim.
--	Moreover, the dataset's size plays a significant role in the effectiveness of Word embedding models like Word2Vec and Doc2Vec. It seems that these models require a substantial amount of training data to accurately represent words. If the dataset used for training the word embeddings is relatively limited, the resulting embeddings might not adequately capture the underlying semantic connections between words. In such situations, simpler models like BOW, which depend on straightforward word occurrence statistics, may yield better results. This is why, in a subsequent phase of the report, we plan to conduct a more extensive analysis where we enhance our dataset by incorporating new environmental claims.
+1. Word2vec, through its vectorization technique, generates a vector for each word and then calculates the average of all these vectors to position the entire sentence in space. Consequently, when a sentence contains words typically associated with environmental claims, their influence on the final placement is significantly diminished since the average of all words in the sentence is taken. As a result, the sentence's position remains anchored at an average level and fails to gravitate towards that of environmental claims.
+2. The second possible reason, as discussed with Prof. Valchos, is that this method may not capture and vectorize all the words effectively. In such cases, if the identified and vectorized words in the sentence happen to be stopwords, there is no opportunity for the entire sentence to be associated with an environmental claim. <br>
+
+- Moreover, the dataset's size plays a significant role in the effectiveness of Word embedding models like Word2Vec and Doc2Vec. It seems that these models require a substantial amount of training data to accurately represent words. If the dataset used for training the word embeddings is relatively limited, the resulting embeddings might not adequately capture the underlying semantic connections between words. In such situations, simpler models like BOW, which depend on straightforward word occurrence statistics, may yield better results. In the case of a Word2Vec model for instance, with a smaller dataset, words like 'climate' may not be adequately represented in the vector space. This may occur because the model has not been trained on a sufficient amount of data to capture the nuanced meanings and associations of such words. Therefore, when using this model on the testing dataset, some sentences containing the word “climate” might not be correctly labelled. This is why, in a subsequent phase of the report, we plan to conduct a more extensive analysis where we enhance our dataset by incorporating new environmental claims
+
+__DistilBERT__
+
+Subsequently, we incorporated a DistilBERT -based model. As shown in the previously presented table, this model outperforms the previous analyses overall. Specifically, the combination of DistilBERT with a logistic regression classifier exhibits an accuracy rate of 87.67%, which surpasses our previous best result for that metric. Despite trailing the TF-IDF and Random Forest combination in precision, the DistilBERT-based model excels in terms of recall metrics, achieving the highest score of 70.31%, again with its combination with logistic regression as a classifier. 
+
+A brief exlaination of DistilBERT: 
+DistilBERT, a variant of the Transformer model, offers valuable advantages over its predecessor, BERT base. According to information shared on the [Hugging Face](https://huggingface.co/docs/transformers/model_doc/distilbert) page, it reduces parameter count by about 40%, resulting in significant gains in computational efficiency. Achieving a processing speed that is 60% faster, while maintaining over 95% of BERT's performance levels, DistilBERT therefore has a balance between resource efficiency and model effectiveness. In our comparisons with other groups using more classical versions of Bert, we observed that DistilBERT can sometimes outperformed them in performance metrics. As mentioned during our discussion with Prof. Vlachos, this superiority can be attributed to its capacity to reduce overfitting using a smaller number of parameters. From what we understood, it is more plausible that models with a higher parameter count are more susceptible to overfitting the training data, resulting in inadequate performance when applied to new data.
+
+
+
+In addition, DistilBERT stands out from the other vectorization methods we have analyzed so far due to its ability to grasp the overall context of a sentence. This means that within the same dataset, a word can be characterized differently based on the broader context of the sentence. In our analysis, this aspect proves particularly beneficial, as illustrated by the word "environment." Depending on the general context, this word can refer to the climate-related environment or the working environment, which is unrelated to environmental claims. Similarly, the verb "reduce," which emerged as a buzzword in the EDA, can have multiple interpretations. A company may reduce its ecological footprint, but it could also reduce its balance sheet debt ratio. Consequently, the capacity to capture sentence context enhances the predictive performance of our model. This increase in performance can be observed in all three metrics.
+
 
 
 
