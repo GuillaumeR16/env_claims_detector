@@ -35,7 +35,9 @@ Disclaimer: among the different models used for predicting environmental claims,
 
 The tables presented below display the performance scores for each model.
 
-![image](https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d5b30941-81c9-4cab-b7c1-740f2d48f6c4)
+
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d5b30941-81c9-4cab-b7c1-740f2d48f6c4">
+
 
 
 
@@ -104,11 +106,6 @@ For all the results that follow these have been created and taken from the follo
 __Analysis 1__
 
 As mentioned previously, in the preliminary analysis, we will assess each chosen bank separately by comparing the variations in their environmental claims over two consecutive years with the corresponding changes in CO2 emissions. This evaluation aims to determine the consistency or disparity between the bank's emphasis on climate change in their annual reports through environmental claims and the actual trend of their CO2 emissions. The table below presents the findings of this analysis.
-
-![image](https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/6941760b-b2d7-4499-8a7a-ff7a1f63b802)
-
-
-![image](https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/9ffc1cc3-707f-4e11-ab17-6cfd42e1a8f7)
 
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/9ffc1cc3-707f-4e11-ab17-6cfd42e1a8f7">
