@@ -28,7 +28,7 @@ For all the results that follow, these have been created and taken from the foll
 
 In this section, we present the key takeaways obtained from our EDA.
 
-1. As can be observed in the image below, the training data set is quite unbalanced in terms of labelled=0 and labelled=1 data. Therefore, working on the dataset will also be key on achieving the best prediction metrics. The same observation can be made for the testing data set.
+1. As can be observed in the image below, the training data set is quite unbalanced in terms of labelled=0 and labelled=1 data. In other words, there is a significant disparity between the number of environmental and non-environmental claims. The same observations can be made for the testing data set. In additon, the default rate in the testing data set is 78.67%. 
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/f2ae0a7b-e461-4fa4-82f9-d60a5d5e6879"> <br>
 
