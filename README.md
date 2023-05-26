@@ -154,9 +154,12 @@ In comparison to the previous table, there are no significant improvements obser
 
 Similar to the previous findings, the recall measurements remain quite low, around 50%. This is concerning for of our study, as it indicates that our model can only identify 50% of the environmental claims present in the sentence corpus. This limitation poses a risk in drawing false conclusions from our analysis of bank annual reports, as the model may miss a substantial number of actual environmental claims documented in these reports. Consequently, using such models could potentially result in a significant underestimation of the environmental ambitions communicated by the banks.
 
+To further improve our performance metrics via dataset modification, we are taking the next step by using not only an expanded dataset but also ensuring its balance (i.e., same observation per class).
 
 ## Augmented & Balanced dataset
 For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
+
+
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/e39ae73a-831f-4429-8930-51dbf0590894">
 
