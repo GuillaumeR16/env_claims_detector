@@ -133,6 +133,8 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 
 ## GPT-3 Text Classifier 
 
+mentionner le high recall!
+
 
 
 # Analysis on annual reports:
@@ -178,25 +180,28 @@ Finally, during the extraction of text from the various annual reports, we focus
 ## Result
 For all the results that follow these have been created and taken from the following file: Fina_Openai_CO2.ipynb
 
+__Exemples"
+
 __Analysis 1__
 
 As mentioned previously, in the preliminary analysis, we will assess each chosen bank separately by comparing the variations in their environmental claims over two consecutive years with the corresponding changes in CO2 emissions. This evaluation aims to determine the consistency or disparity between the bank's emphasis on climate change in their annual reports through environmental claims and the actual trend of their CO2 emissions. The table below presents the findings of this analysis.
 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/9ffc1cc3-707f-4e11-ab17-6cfd42e1a8f7">
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/293af090-bf35-4012-89a3-50a150c290ef"> <br>
 
-The first thing to notice is that for all of the selected banks, the number of environmental claims has significantly increased between 2019 and 2020, indicating a growing emphasis on environmental issues. This observed trend could potentially be attributed to various factors, such as external pressure from stakeholders urging the bank to address environmental concerns in response to their growing societal significance. Alternatively, it may stem from the bank's genuine commitment to align its climate actions. To gain further insights, let us examine the evolution of CO2 emissions.
 
-Out of the five actors examined, only two experienced a decrease in their CO2 emissions during the analyzed period—Crédi Suisse and JP Morgan. Consequently, the remaining three players demonstrated an increase in their environmental communication while simultaneously increasing their CO2 emissions. The case of UBS is particularly noteworthy, as our model identified 43 additional instances of environmental claims in 2020, while there was an increase of 335,550 in CO2 emissions over the same period. BCV and Goldman Sachs also exhibited a similar but less significant trend, with a smaller increase in emissions.
+The first thing to notice is that for all of the selected banks, the number of environmental claims has significantly increased between 2019 and 2020, indicating a growing emphasis on environmental-relatated topics by banks. This observed trend could potentially be attributed to various factors, such as external pressure from stakeholders urging the bank to address environmental concerns in response to their growing societal significance. Alternatively, it may stem from the bank's genuine commitment to align its climate actions. To gain further insights, let us examine the evolution of CO2 emissions.
 
-For instance, let's consider a sentence from UBS's 2020 annual report, which our model predicts as an environmental claim: "*We’re one of only 5% of the 5,800+ companies scored  that are A-listed for environmental transparency and action to  cut emissions, mitigate climate risks and develop the low-carbon  economy.*"
+Out of the five actors examined, only two experienced a decrease in their CO2 emissions during the analyzed period—Crédi Suisse and JP Morgan. Consequently, the remaining three players demonstrated an increase in their environmental communication while simultaneously increasing their CO2 emissions. The case of UBS is particularly noteworthy, as our model identified 19 additional instances of environmental claims in 2020, while there was an increase of 335,550 in CO2 emissions over the same period. BCV and Goldman Sachs also exhibited a similar but less significant trend, with a smaller increase in emissions.
+
+For instance, let's consider a sentence from UBS's 2020 annual report, which our model predicts as an environmental claim: "*We delivered the best of UBS to our clients and  extended our leadership in sustainability.*"
 
 However, does this imply that UBS is engaging in greenwashing? As discussed later in the analysis, it is challenging to draw a definitive conclusion based solely on this evidence. To ascertain the presence of greenwashing, a more extended analysis over a longer timeframe would be necessary. Nevertheless, the observations made regarding UBS could be considered a warning sign of potential greenwashing activities. Hence, an investor (e.g., a pension fund) could employ the developed model to identify such disparities between claims and CO2 emissions, enabling them to delve deeper into their analysis by requesting explanations from UBS regarding the reasons behind this discrepancy.
 
 
-Furthermore, it is worth highlighting the contrast in the number of claims detected by our model between the chosen Swiss banks and American banks. Remarkably, our findings indicate that the American banks fall significantly short in terms of publicly disclosing their climate objectives compared to their Swiss counterparts. Despite Goldman Sachs' considerably larger balance sheet and extensive operations, our model predicts a mere two environmental claims made by the bank in 2019, while BCV, a Swiss bank, stands out with 18 claims during the same period. This disparity may be attributed, in part, to potential factors like public pressure that could lower climate-related disclosures in the US context.
+Furthermore, it is worth highlighting the contrast in the number of claims detected by our model between the chosen Swiss banks and American banks. Remarkably, our findings indicate that the American banks fall significantly short in terms of publicly disclosing their climate objectives compared to their Swiss counterparts. Despite Goldman Sachs' considerably larger balance sheet and extensive operations, our model predicts a mere two environmental claims made by the bank in 2019, while BCV, a Swiss bank, stands out with 16 claims during the same period. This disparity may be attributed, in part, to potential factors like public pressure that could lower climate-related disclosures in the US context.
 
-In addition, from the data provided in the table, it is evident that there exists a notable difference among the banks in terms of their CO2 emissions. This discrepancy can be attributed to variations in their size and operations, resulting in significantly differing levels of CO2 emissions. This observation brings us to our second analysis, wherein we propose the utilization of a metric to standardize the measurement of CO2 emissions: CO2 intensity.
+In addition, from the data provided in the table, it is evident that there exists a notable difference among the banks in terms of their CO2 emissions. This discrepancy can be attributed to variations in their size and operations, resulting in significantly differing levels of CO2 emissions. This observation brings us to our second analysis, wherein we propose the use of a metric to standardize the measurement of CO2 emissions: CO2 intensity.
 
 
 __Analysis 2__
@@ -204,20 +209,22 @@ __Analysis 2__
 The CO2 intensity measure, as previously mentioned, evaluates a company's CO2 emissions in relation to the revenue it generates. This measure enables the comparison of companies of varying sizes and impacts, as it is reasonable to assume that companies with higher revenue will be larger and have a bigger societal influence. For each bank, a CO2 intensity measure will be established to standardize their CO2 emissions based on their respective revenues. This normalization facilitates fair comparisons among banks operating in the same industry but differing in size. By utilizing this metric, we will rank banks according to their CO2 intensity and compare it with the number of environmental claims they have. This analysis aims to identify cases where a bank, despite having a low CO2 intensity ranking, extensively promotes its climate ambitions.
 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/3a963d94-c692-40a9-a9eb-081f493a3251">
 
-For the reader information: in the provided table, companies with the lowest values in the "Rank - CO2 Intensity" column have the best CO2 emissions metrics. However, companies with the lowest values in the "Rank - Env. Claims" column are the ones that make the most environmental claims in their reports.
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/f5fdeaa2-3eda-4fd4-9bc2-b32e47e69245"> <br>
+
+
+
+For the reader information: in the provided table, companies with the lowest values in the "Rank - CO2 Intensity" column have the best CO2 intensity metrics. However, companies with the lowest values in the "Rank - Env. Claims" column are the ones that make the most environmental claims in their reports.
 
 First, compared to the table in Analysis 1, where only global CO2 emissions were reported, the range of values for different banks in relation to their CO2 intensity is narrower. This allows for a better comparison between the companies as desired.
 
 From analyzing both rankings, it becomes apparent that the correlation between the two is not perfect. Just because a company communicates extensively about its environmental ambitions does not necessarily make it the best environmental performer. Although this result was expected, it is still interesting to note. Furthermore, two notable observations can be made based on this table, concerning Goldman Sachs and UBS for the year 2020.
 
-In the year 2020, Goldman Sachs obtained the worst ranking in terms of CO2 intensity, scoring 35.95. However, it also ranked poorly in the number of environmental claims compared to other players. This indicates a situation contrary to greenwashing, where the company has a significant negative impact on the environment without attempting to conceal it through positive ESG language in its annual report. Although this is unfavorable from an environmental impact perspective, at least the bank does not deceive its investors and other stakeholders.
+In the year 2020, Goldman Sachs ranked eight in terms of CO2 intensity, scoring 35.95. However, it also ranked poorly in the number of environmental claims compared to other players. This indicates a situation contrary to greenwashing, where the company has a significant negative impact on the environment without attempting to conceal it through positive ESG language in its annual report. Although this is unfavorable from an environmental impact perspective, at least the bank does not deceive its investors and other stakeholders (i.e., does not appear as greenwashing).
 
+In contrast, UBS is facing another challenging situation in 2020. According to its annual report, it ranks first in terms of the number of environmental claims, but lags behind its competitors in CO2 intensity (9 position). Again, this raises concerns about potential greenwashing practices by the largest Swiss bank. In addition, the same observation can be observed for 2019, where the swiss bank rank second in environmental claims, but last in terms of CO2 intensity.
 
-In contrast, UBS is facing another challenging situation in 2020. According to its annual report, it ranks first in terms of the number of environmental claims, but lags behind its competitors in CO2 intensity. Again, this raises concerns about potential greenwashing practices by the largest Swiss bank. However, it is worth noting that UBS's CO2 intensity has significantly increased between 2019 and 2020.
-
-When comparing Swiss banks to their US counterparts, it can be seen that US banks tend to rank lower in terms of CO2 intensity. Specifically, they occupy positions 6, 8, 9, and 10 in the ranking. This finding may suggest that Swiss banks are more advanced in their commitment to creating a more sustainable world.
+When comparing the other Swiss banks to their US counterparts, it can be seen that US banks tend to rank lower in terms of CO2 intensity. Specifically, they occupy positions 5, 6, 7, and 8 in the ranking. This finding may suggest that Swiss banks, with the exception of UBD, are more advanced in their commitment to creating a more sustainable world.
 
 Again, it is important to note that this conclusion is drawn from a limited sample and should not be solely relied upon for making greenwashing accusations. To obtain more accurate results, it is crucial to expand the study to include a larger number of banks and conduct research over a longer period. Despite this limitation, we have confidence in the effectiveness of our model in identifying potential instances of greenwashing. With an impressive recall rate of 82.81%, our model has proven its ability to detect environmental claims across various text sources. This makes it a valuable tool, which can be shared with portfolio managers, for instance, enabling them to “red-flag” companies that may be engaging in greenwashing practices. By simply inputting a URL, our model can analyze the number of claims made and facilitate necessary comparisons with environmental metrics. 
 
