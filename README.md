@@ -187,6 +187,8 @@ Dire qu'on a mis le develpp avec.
 
 mentionner le high recall! 
 
+Et dire que pour des rasions financières, l'analyse dees rapoorts annuels se fera sur la base du model ada (comparer avec ditilbert et le dernier BOW)
+
 
 
 # Analysis on annual reports:
