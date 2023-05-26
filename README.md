@@ -128,6 +128,8 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 ## Augmented dataset
 For all the results that follow, these have been created and taken from the following file: models_prediction_augmented.ipynb
 
+After conducting a thorough analysis on enhancing our models through the incorporation of diverse classifiers and vectorizers, as well as fine-tuning each model individually, we aimed to investigate the impact of improving the initial dataset on performance metrics. In light of this, leveraging chatGPT's assistance, we supplemented our testing dataset with an additional 415 environmental claims. 
+
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/2db8c196-079e-472e-8825-99c3a4655e7b">
 
 
