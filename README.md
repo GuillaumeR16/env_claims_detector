@@ -3,6 +3,17 @@
 # Introduction
 With increasing global warming, companies’ pressure to adapt to new social norms enhances. Most countries signed the Paris Agreement, back in 2015, which includes National Determined Contributions (NDCs), which outline the countries climate actions, mitigation targets and adaptation measures. To fulfill those targets, the industrial sector has a crucial role to play within each country. Therefore, public, governmental, and legal demand plays a key role for companies to comply with the set targets. This has pushed companies to adapt and apply sustainable practices within their firm. While some companies have been first mover within adoption of sustainable and ethical business practices following the Environmental, Social, and Governance (ESG) guidelines, others are trying to take the shortcut and avoid any measurements towards these needs.
 
+# Task attribution
+As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
+
+Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the entire exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
+
+Noé took the lead in building the foundation for the text classifier models, which served as a starting point for the team. With his strong coding skills, Guillaume then enhanced and improved the existing models and incorporated GPT-3 into our project. Guillaume also undertook the task of code cleanup, implementing various functions to streamline our notebooks and optimize the overall process, making it more efficient and comprehensible.
+
+When it came to analyzing the annual reports of the bank, Noé formulated the overall strategy for this task and implemented the best model discovered thus far. Noé also constructed the tables used for comparisons between companies within the industry. Guillaume also contributed to this aspect by simplifying and optimizing the code.
+
+In general, tasks were allocated based on each person's expertise and preferences, ensuring an equal distribution of responsibilities. However, it's important to note that all the conclusions drawn from our research were based on group discussions and input from all members.
+
 
 # Research question
 This is where our research comes into play. Sustainability is a rising star in terms of customer needs, and business reputation. As a company, being associated with sustainable practices increases the company’s competitive advantage and therefore attracts an increasing number of customers, especially the younger generation. In industries as far from energy and food to manufacturing and banking, the demand for green practices has increased tremendously. This incentivizes companies to build a “green” reputation around their business, which often comes with lies, false statements, and unachievable goal settings. To understand the extend of actual implementation of green practices versus false environmental claims our research is exploring the following question: “To what extent are companies actually implementing sustainable practices, and to what extent do sustainability reports reflect genuine efforts, as opposed to being mere instances of greenwashing?” In more detail, we will be training a model which differentiates environmental claims from other business statements of companies, and then comparing the number of claims to carbon emissions of this company. How do they develop within each company? How do they compare between companies? These questions will be answered within our research. Since we are focusing on sustainable practices, it goes hand in hand with looking at the 2030 Agenda for Sustainable Development, containing 17 Goals (SDGs), developed by the United Nations an adopted by all United Nations Member States in 2015. The goals provide a shared blueprint for peace and prosperity for people and the planet, now and into the future. This research will focus on the global banking industry and therefore touches three main [SDGs](https://sdgs.un.org/goals):
@@ -128,9 +139,17 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 ## Augmented dataset
 For all the results that follow, these have been created and taken from the following file: models_prediction_augmented.ipynb
 
-After conducting a thorough analysis on enhancing our models through the incorporation of diverse classifiers and vectorizers, as well as fine-tuning each model individually, we aimed to investigate the impact of improving the initial dataset on performance metrics. In light of this, leveraging chatGPT's assistance, we supplemented our testing dataset with an additional 415 environmental claims. 
+After conducting a thorough analysis on enhancing our models through the incorporation of diverse classifiers and vectorizers, as well as fine-tuning each model individually, we aimed to investigate the impact of improving the initial dataset on performance metrics. In light of this, leveraging chatGPT's assistance, we supplemented our testing dataset with an additional 415 environmental claims. Once the size of our training data set was increased, we proceeded to run the same models as before, but this time on the newly expanded dataset. 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/2db8c196-079e-472e-8825-99c3a4655e7b">
+But before examining the outcomes, in what way can the inclusion of additional data improve the performance of a model?
+- More learning examples: A larger dataset provides more sentences labeled as environmental claims for the model to learn from, helping it understand the patterns and characteristics of such claims. Therefore, our different models may improve at recognizing what truely differentiate environmental claims from non-environmental ones.
+- Better feature representation: With an increased number of environmental claims in the dataset, the model becomes familiar with a wider range of sentence structures, wording, and contextual information associated with environmental claims. Hence, when faced with new unseen sentences, our different models may be better as labelleing them as environmental claims or not accuratly.
+
+Now, let's examine the results of our models using this expanded dataset and determine if it has genuinely improved the performance metrics, as suggested by the reasons above.
+
+
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/2db8c196-079e-472e-8825-99c3a4655e7b"> <br>
+
 
 
 ## Augmented & Balanced dataset
