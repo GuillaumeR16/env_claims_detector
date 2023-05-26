@@ -177,6 +177,12 @@ However, two notable observations stand out:
 
 ## GPT-3 Text Classifier 
 
+As previously stated in this report, the analysis of two additional models has been postponed until the end of the study. These models, although implemented by us on python, originate more from external sources and utilize GPT-3 Text Classifier with davinci and ada as the chosen models. We did not wish to directly compare these models with previously analyzed models because we did not believe we have significantly contributed to the establishment of these models in the context of our analysis (e.g., no direct fine-tuning and parameter search). Nonetheless, as shown in the confusion matrix below, these two models typically produce the greatest results. This is precisely why we incorporate them into the report, as their inclusion enhances the performance of our model, which is the primary objective of our study/assignement.
+
+__ada__
+
+__davinci__
+
 Dire qu'on a mis le develpp avec. 
 
 mentionner le high recall! 
