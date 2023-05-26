@@ -127,6 +127,12 @@ DistilBERT, a variant of the Transformer model, offers valuable advantages over 
 In addition, DistilBERT stands out from the other vectorization methods we have analyzed so far due to its ability to grasp the overall context of a sentence. This means that within the same dataset, a word can be characterized differently based on the broader context of the sentence. In our analysis, this aspect proves particularly beneficial, as illustrated by the word "environment." Depending on the general context, this word can refer to the climate-related environment or the working environment, which is unrelated to environmental claims. Similarly, the verb "reduce," which emerged as a buzzword in the EDA, can have multiple interpretations. A company may reduce its ecological footprint, but it could also reduce its balance sheet debt ratio. Consequently, the capacity to capture sentence context enhances the predictive performance of our model. This increase in performance can be observed in all three metrics.
 
 
+## Augmented dataset
+
+## Augmented & Balanced dataset
+
+## GPT-3 Text Classifier 
+
 
 
 # Analysis on annual reports:
@@ -226,7 +232,7 @@ Again, it is important to note that this conclusion is drawn from a limited samp
 - **The accuracy of scope 3**: The accuracy of scope 3 remains a challenge for estimating emissions from financial institutions. However, can we accurately determine the CO2 emissions impact of BCV's financing loan to a local SME involved in piano construction? he task of obtaining precise figures in this regard remains difficult. Consequently, relying solely on numerical metrics is inadequate when determining whether a company is greenwashed. Instead, it should be important to consider other factors, such as their involvement in financing new O&G projects for example, even if the investment amount is minimal. Although such projects may not significantly inflate CO2 emissions relative to the limited capital invested, they provide insights into the bank's overall policy and the sectors in which the bank want to allocate its resources.
 
 
-- **Greenwashing ?** : In summary, this model proves highly effective at assessing environmental claims but cannot directly determine greenwashing. To address this, the user has to conduct a comprehensive comparison across various environmental metrics such as C02 emissions, CO2 emissions, and others. Although this presents challenges, it would be intriguing to develop a model specifically designed to detect greenwashing directly. One approach could involve researchers concentrating on companies known to engage in greenwashing and labeling specific “greenwashing claims” in their reports. Indeed, it is possible that certain words regularly appear in the annual reports of companies involved in greenwashing practices. However, creating such a model would also carry legal risks, as accusing a company of greenwashing is a serious matter, as demonstrated by the DWS case last year. Hence, this model would need human verification given the fine line between greenwashing and genuine climate ambitions, which makes the detection task even more challenging.
+- **Greenwashing ?** : In summary, this model proves highly effective at assessing environmental claims but cannot directly determine greenwashing. To address this, the user has to conduct a comprehensive comparison across various environmental metrics such as C02 emissions, CO2 emissions, and others. Although this presents challenges, it would be intriguing to develop a model specifically designed to detect greenwashing directly. One approach could involve researchers concentrating on companies known to engage in greenwashing and labeling specific “greenwashing claims” in their reports. Indeed, it is possible that certain words regularly appear in the annual reports of companies involved in greenwashing practices. However, creating such a model would also carry legal risks, as accusing a company of greenwashing is a serious matter, as demonstrated by the [DWS](https://www.reuters.com/business/finance/deutsche-banks-dws-sued-by-consumer-group-over-alleged-greenwashing-2022-10-24/) case last year. Hence, this model would need human verification given the fine line between greenwashing and genuine climate ambitions, which makes the detection task even more challenging.
 
 ## Conclusion
 
