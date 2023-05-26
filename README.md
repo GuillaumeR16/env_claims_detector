@@ -126,11 +126,13 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 
 
 ## Augmented dataset
+For all the results that follow, these have been created and taken from the following file: models_prediction_augmented.ipynb
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/2db8c196-079e-472e-8825-99c3a4655e7b">
 
 
 ## Augmented & Balanced dataset
+For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/e39ae73a-831f-4429-8930-51dbf0590894">
 
