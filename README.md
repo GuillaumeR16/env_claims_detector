@@ -159,9 +159,15 @@ To further improve our performance metrics via dataset modification, we are taki
 ## Augmented & Balanced dataset
 For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
 
+As mentioned privately, this sections will now use a balanced dataset. To do this, we ensured that the number of environmental and non-environmental claims was equal within our training set. On this basis, we removed 901 non-environmental claims to obtain a balanced dataset with 957 sentences per class. 
 
+As we have seen in class with Prof. Michalis Vlachos, better performance metrics can be achieved through a balanced dataset thanks to an avoidance of biais. Indeed, when the we have an unequal number of observations per class, the model might become biased towards the majority class. Our our case, sinces they were more non-environmental claims than environmental claims in the beginning, the model may have focusedd more on learning patterns related to non-environmental claims and struggle to accurately identify environmental claims. 
+
+Now, let's see if having a balanced daataset is improving the performance metrics !
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/e39ae73a-831f-4429-8930-51dbf0590894">
+
+
 
 
 ## GPT-3 Text Classifier 
