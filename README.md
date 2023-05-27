@@ -117,7 +117,7 @@ After examining the results, our initial observation is as follows: models based
 -	Focusing solely on the results from the Word2vec vectorizer, we can see that the results are very low compared to the other vectorizers, and this is true across all classification methods. Even the Word2Vec-Decision Tree combination yields accuracy equivalent to the default rate, meaning that the model predicts all sentences as non-environmental claims. This outcome is reflected in the confusion matrix presented below: 
 
 
-<img width="900" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/30b8b58d-5840-4a5f-b857-8aa8fadb75a4">
+<img width="900" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/30b8b58d-5840-4a5f-b857-8aa8fadb75a4"> <br>
 
 The precision and recall metrics are calculated based on the number of True Positives predicted by the model. Since all sentences are labeled as 0, it is expected to observe both these metrics equal to 0. 
 
@@ -127,7 +127,7 @@ Why does this model exhibit inferior performance compared to the others? Our ana
 2. The second possible reason, as discussed with Prof. Valchos, is that this method may not capture and vectorize all the words effectively. In such cases, if the identified and vectorized words in the sentence happen to be stopwords, there is no opportunity for the entire sentence to be associated with an environmental claim. <br>
 
 - Moreover, the dataset's size plays a significant role in the effectiveness of Word embedding models like Word2Vec and Doc2Vec. It seems that these models require a substantial amount of training data to accurately represent words. If the dataset used for training the word embeddings is relatively limited, the resulting embeddings might not adequately capture the underlying semantic connections between words. In such situations, simpler models like BOW, which depend on straightforward word occurrence statistics, may yield better results. In the case of a Word2Vec model for instance, with a smaller dataset, words like 'climate' may not be adequately represented in the vector space. This may occur because the model has not been trained on a sufficient amount of data to capture the nuanced meanings and associations of such words. Therefore, when using this model on the testing dataset, some sentences containing the word “climate” might not be correctly labelled. This is why, in a subsequent phase of the report, we plan to conduct a more extensive analysis where we enhance our dataset by incorporating new environmental claims.
-- Furthermore, when examining the displayed table, it appears that the recall metric is quite low for most of the models. As previously mentioned, such feature couuld be dangerous for our annual rapoort analysis. We'll come back to this point in the next section.
+- Furthermore, when examining the displayed table, it appears that the recall metric is quite low for most of the models. As previously mentioned, such feature couuld be dangerous for our annual rapoort analysis. We will come back to this point in the next section.
 
 __DistilBERT__
 
@@ -161,20 +161,20 @@ To further improve our performance metrics via dataset modification, we are taki
 ## Augmented & Balanced dataset
 For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
 
-As mentioned privately, this sections will now use a balanced dataset. To do this, we ensured that the number of environmental and non-environmental claims was equal within our training set. On this basis, we removed 901 non-environmental claims to obtain a balanced dataset with 957 sentences per class. 
+As previously mentioned, this section will now use a balanced dataset. To do this, we ensured that the number of environmental and non-environmental claims was equal within our training set. On this basis, we removed 901 non-environmental claims to obtain a balanced dataset with 957 sentences per class. 
 
-As we have seen in class with Prof. Michalis Vlachos, better performance metrics can be achieved through a balanced dataset thanks to an avoidance of biais. Indeed, when the we have an unequal number of observations per class, the model might become biased towards the majority class. Our our case, sinces they were more non-environmental claims than environmental claims in the beginning, the model may have focusedd more on learning patterns related to non-environmental claims and struggle to accurately identify environmental claims. 
+As we have seen in class with Prof. Michalis Vlachos, better performance metrics can be achieved through a balanced dataset thanks to an avoidance of biais. Indeed, when the we have an unequal number of observations per class, the model might become biased towards the majority class. Our our case, sinces they were more non-environmental claims than environmental claims in the beginning (see EDA), the model may have focused more on learning patterns related to non-environmental claims and struggle to accurately identify environmental claims. 
 
 Now, let's see if having a balanced daataset is improving the performance metrics !
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/e39ae73a-831f-4429-8930-51dbf0590894">
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/e39ae73a-831f-4429-8930-51dbf0590894"> <br>
 
 Unfortunately, once again, we did not observe a consistent improvement across all models.
 
 However, two notable observations stand out:
 
-- Firstly, focusing on the metric of accuracy alone, particularly with the TF-IDF vectorizer, we observed a decrease compared to our initial results. In our opinion, this could be attributed to the reduction in the document size, resulting in a smaller training set. With fewer sentences available, the TF-IDF model may struggle to effectively identify the most frequent words in the data. Therefore, if such words appear in the testing set, their weight would not be reduced as it should.
-- Secondly, when combining BOW with Random Forest, we observed an exceptionally high recall rate of 85.94%. This represents a significant improvement compared to the initial table's recall value of 45.31% and the augmented dataset's value of 57.81%. As mentioned earlier, our model may suffer from less bias, particularly when using a simple vectorizer like BOW that counts the occurrence of words. The balanced dataset exposed the model to an equal number of environmental and non-environmental claims, enabling it to focus more equally than before on detecting both types of claims. This is reflected in the high recall metric. In the opposite way, the model makes more errors in the correct identification of all labels (0 and 1), which can be seen in particular with a slight drop in accuracy.
+- Firstly, focusing on the metric of accuracy alone, particularly with the TF-IDF vectorizer, we observed a decrease compared to our initial results. In our opinion, this could be attributed to the reduction in the document size, resulting in a smaller training set. With fewer sentences available, the TF-IDF model may struggle to effectively identify the most frequent words in the data. Therefore, if these commonly occurring words were to appear in the testing set, their significance may not be appropriately diminished as it was the case in previous models.
+- Secondly, when combining BOW with Random Forest, we observed an exceptionally high recall metric of 85.94%. This represents a significant improvement compared to the initial table's recall value of 45.31% and the augmented dataset's value of 57.81%. As mentioned earlier, our model may suffer from less bias, particularly when using a simple vectorizer like BOW that counts the occurrence of words. The balanced dataset exposed the model to an equal number of environmental and non-environmental claims, enabling it to focus more equally than before on detecting both types of claims. This is reflected in the high recall metric. In the opposite way, the model makes more errors in the correct identification of all labels (0 and 1), which can be seen in particular with a slight drop in accuracy.
 
 
 ## GPT-3 Text Classifier 
