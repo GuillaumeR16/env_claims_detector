@@ -70,23 +70,6 @@ In this section, we present the key takeaways obtained from our EDA.
 
 
 # Performance of models
-For all the results that follow, these have been created and taken from the following file: model_prediction.ipynb
-
-The performance of each model is assessed based on three key metrics: accuracy, precision, and recall. Before delving into a detailed analysis of these metrics, let's recap their significance in the context of environmental claim detection:
-
-__Accuracy__: The accuracy metric evaluates how well the model correctly predicts whether a sentences as either environmental claims or non-environmental claims throughout the entire dataset. It measures the overall correctness of the model's predictions, indicating the proportion of correctly classified sentences (0 or 1). Therefore, a higher accuracy score signifies a more reliable model in accurately identifying environmental claims and non-environmental claims.
-
-__Precision__: Precision is a performance metric that focuses on the accuracy of positive predictions made by the model. In the context of environmental claim detection, precision evaluates the model's ability to correctly identify sentences as environmental claims when it predicts them to be so. It measures the proportion of true positive predictions (i.e., sentences correctly classified as environmental claims) out of all the positive predictions made by the model. A higher precision score indicates that the model is making fewer false positive predictions and is more accurate in identifying genuine environmental claims.
-
-__Recall__: Recall focuses on how effectively the model captures and detects actual environmental claims from the entire set of environmental claims present in the dataset. It measures the proportion of true positives (i.e., actual environmental claims predicted as environmental claims) relative to the total number of actual environmental claims. A higher recall score indicates that the model has a greater ability to identify and include actual environmental claims in its predictions, minimizing the number of false negatives.
-
-In our further comprehensive analysis of different bank reports, each of the three metrics holds significant importance. Simply relying on accuracy alone can be misleading as it fails to directly capture the model's performance in detecting environmental claims. For instance, a model may excel at accurately recognizing non-environmental claims, resulting in a high accuracy score if the text to is big. However, if the text corpus only contains a few numbers of environmental claims, such model may struggle to identify and classify environmental claims accurately. This scenario raises potential risks as it can falsely portray a company as lacking transparency in its climate ambitions when, in reality, it may actively communicate them, but in a concise manner. In such cases, a high recall metric becomes relevant as it ensures the correct detection of all environmental claims in the reports. Precision is equally crucial in this context, as a low precision could attribute a company with excessive communication (assigning many incorrect "1" labels), potentially raising concerns in greenwashing assessments, even if the company did not disclose anything on their environmental ambitions.
-
-To sum up, when we examine which models would be the most suitable for analyzing the annual reports of various banks, it is crucial to consider these metrics collectively in a comprehensive manner. This approach allows us to accurately assess the strengths and weaknesses of each model's ability to identify environmental claims.
-
-
-Now let’s look at the numbers!
-
 Disclaimer: among the different models used for predicting environmental claims, the one implemented with the GPT3 davinci model stands out as the best performer in terms of accuracy, precision, and recall, with respectively 90%, 73,61% and 82%. However, the analysis in this model and the ada model will be deferred to a later stage, as they were not constructed from scratch but rather sourced from diverse resources towards the end of our project. In the beginning we want assess and comment the performances of more “in-house” that we have built and fine-tuned. Hence, our initial focus will be directed towards the examination of the following models: 
 
 - BOW
@@ -102,9 +85,23 @@ Furthermore, all of these models have been evaluated using the following classif
 - and Random Forest
 
 
-In the end, we have a total of 20 models to analyze, each with three performance metrics. All of the models have undergone fine-tuning. You can find the code and details of the fine-tuning process for all the models in the following notebook: XXXX.ipynb.
+In the end, we have a total of 20 models to analyze, each with three performance metrics. All of the models have undergone fine-tuning. You can find the code and details of the fine-tuning process for all the models in the following notebook: model_prediction.ipynb
 
-The tables presented below display the performance scores for each model.
+
+The performance of each model is assessed based on three key metrics: accuracy, precision, and recall. Before delving into a detailed analysis of these metrics, let's recap their significance in the context of environmental claim detection:
+
+__Accuracy__: The accuracy metric evaluates how well the model correctly predicts whether a sentences as either environmental claims or non-environmental claims throughout the entire dataset. It measures the overall correctness of the model's predictions, indicating the proportion of correctly classified sentences (0 or 1). Therefore, a higher accuracy score signifies a more reliable model in accurately identifying environmental claims and non-environmental claims.
+
+__Precision__: Precision is a performance metric that focuses on the accuracy of positive predictions made by the model. In the context of environmental claim detection, precision evaluates the model's ability to correctly identify sentences as environmental claims when it predicts them to be so. It measures the proportion of true positive predictions (i.e., sentences correctly classified as environmental claims) out of all the positive predictions made by the model. A higher precision score indicates that the model is making fewer false positive predictions and is more accurate in identifying genuine environmental claims.
+
+__Recall__: Recall focuses on how effectively the model captures and detects actual environmental claims from the entire set of environmental claims present in the dataset. It measures the proportion of true positives (i.e., actual environmental claims predicted as environmental claims) relative to the total number of actual environmental claims. A higher recall score indicates that the model has a greater ability to identify and include actual environmental claims in its predictions, minimizing the number of false negatives.
+
+In our further comprehensive analysis of different bank reports, each of the three metrics holds significant importance. Simply relying on accuracy alone can be misleading as it fails to directly capture the model's performance in detecting environmental claims. For instance, a model may excel at accurately recognizing non-environmental claims, resulting in a high accuracy score if the text to is big. However, if the text corpus only contains a few numbers of environmental claims, such model may struggle to identify and classify environmental claims accurately. This scenario raises potential risks as it can falsely portray a company as lacking transparency in its climate ambitions when, in reality, it may actively communicate them, but in a concise manner. In such cases, a high recall metric becomes relevant as it ensures the correct detection of all environmental claims in the reports. Precision is equally crucial in this context, as a low precision could attribute a company with excessive communication (assigning many incorrect "1" labels), potentially raising concerns in greenwashing assessments, even if the company did not disclose anything on their environmental ambitions.
+
+To sum up, when we examine which models would be the most suitable for analyzing the annual reports of various banks, it is crucial to consider these metrics collectively in a comprehensive manner. This approach allows us to accurately assess the strengths and weaknesses of each model's ability to identify environmental claims.
+
+
+Now let’s look at the numbers! The table presented below display the performance scores for each model.
 
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d579bbd1-f7eb-4445-bfd4-e1e2d0c55768"> <br>
