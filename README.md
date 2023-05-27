@@ -3,7 +3,7 @@
 __Contributors:__
 - Guillaume Rico
 - Charlotte Ahrens
-- - Noé Lopez
+- Noé Lopez
 
 # Task attribution
 As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
