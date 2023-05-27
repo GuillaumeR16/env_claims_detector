@@ -239,30 +239,30 @@ The data related to the climate performance of each bank was obtained from the T
 - Carbon Intensity-Scope 3 (tonnes CO2e/USD mn)
  
 
-Finally, during the extraction of text from the various annual reports, we focused on retaining the specific pages and chapters where environmental claims could potentially be found. Not all sections of the annual reports were pertinent to our analysis (e.g., financial statements, audit reports, etc.). Hence, each report was exanimated to identify the relevant portions and our predictive model was exclusively applied to these specific segments of the report.
+Finally, during the extraction of text from the various annual reports, we focused on retaining the specific pages and chapters where environmental claims could potentially be found. Not all sections of the annual reports were pertinent to our analysis (e.g., financial statements, audit reports, etc.). Hence, each report was individually exanimated to identify the relevant sections and our predictive model was exclusively applied to these specific segments of the report.
 
 
 
 ## Result
-For all the results that follow these have been created and taken from the following file: Fina_Openai_CO2.ipynb
+For all the results that follow these have been created and taken from the following file: banks_reports.ipynb
 
 __Examples__
 
-Before proceeding further, let's take a moment to examine the phrases that our model has identified as environmental claims in annual reports. Below are some examples:
+Before proceeding further, let's take a moment to examine some of the sentences that our model has identified as environmental claims in different annual reports. Below are some examples:
 
 Environmental claims:
 - BCV 2020: "It oﬀers a broad, transparent view of what we are doing to fulﬁll our commitment to promoting economically, socially, and environmentally sustainable development." 
 - Crédit Suisse 2020: "We launched a new Sustainability, Research & Investment Solutions (SRI) function at the Executive Board level, underlining the sharpened focus on sustainability."
-- Goldman Sachs 2019: "We are  focused on ensuring our efforts in this area are aligned  with and accretive to our overall sustainability objectives."
+- Goldman Sachs 2020: "For example, we have launched partner-led  sustainability councils within each of our divisions."
 
 
 Non-environmental claims:
 - BCV 2019: "The Board of Directors is recommending that shareholders approve a 10-for-1 stock split, in order to  enhance the liquidity of BCV’s share."
 - UBS 2020: "We also provide a combined annual report for  UBS Group AG and UBS AG consolidated, which additionally  includes the consolidated financial statements of UBS AG as  well as supplemental disclosures required under SEC  regulations and is the basis for our SEC Form 20-F filing."
 
-These examples demonstrate the effectiveness of our model. Moreover, we can observe that the phrases categorized as environmental claims are generally specific to the environment, with a few exceptions, and do not encompass the entirety of ESG vocabulary. For instance, the sentence from J.P. Morgan in 2020 stating, "As you know, we have long championed the essential role of banking in a community - its potential for bringing people together, for enabling companies and individuals to reach for their dreams." has not been classified as an environmental claim. This further reinforces our confidence in the quality of our model.
+These examples demonstrate the effectiveness of our model. Moreover, we can observe that the sentences categorized as environmental claims are generally specific to the environment, with a few exceptions, and do not encompass the entirety of ESG vocabulary. For instance, one sentence from J.P. Morgan in 2020 stating, "As you know, we have long championed the essential role of banking in a community - its potential for bringing people together, for enabling companies and individuals to reach for their dreams." has not been classified as an environmental claim (see nootbook). This further reinforces our confidence in the quality of our model.
 
-However, it is important to note that our model is not perfect. In the case of J.M. Morgan in 2019, the following sentence has been identified as an environmental claim: "Over the last five years, for example, we've used technology and machine learning to reduce fraud losses in the credit card business by 50%." This demonstrates that false predictions can occur for environmental claims, indicating that our model's is not perfect (e.g., not a a 100% precision). It is possible that in this particular sentence, the presence of the word "reduce" influenced its classification as environmentally related.
+However, it is important to note that our model is not perfect. In the case of J.M. Morgan in 2019, the following sentence has been identified as an environmental claim: "Over the last five years, for example, we've used technology and machine learning to reduce fraud losses in the credit card business by 50%." This demonstrates that false predictions can occur for environmental claims, indicating that our model's is clearly not perfect (e.g., not a a 100% precision). It is possible that in this particular sentence, the presence of the word "reduce" influenced its classification as environmentally related (i.e., buzzword).
 
 __Analysis 1__
 
