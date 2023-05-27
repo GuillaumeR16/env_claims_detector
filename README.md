@@ -176,14 +176,26 @@ However, two notable observations stand out:
 
 
 ## GPT-3 Text Classifier 
+For all the results that follow, these have been created and taken from the following file: GPT_3_finetuning_ada.ipynb & GPT_3_finetuning_davinci.ipynb
+
 
 As previously stated in this report, the analysis of two additional models has been postponed until the end of the study. These models, although implemented by us on python, originate more from external sources and utilize GPT-3 Text Classifier with davinci and ada as the chosen models. We did not wish to directly compare these models with previously analyzed models because we did not believe we have significantly contributed to the establishment of these models in the context of our analysis (e.g., no direct fine-tuning and parameter search). Nonetheless, as shown in the confusion matrix below, these two models typically produce the greatest results. This is precisely why we incorporate them into the report, as their inclusion enhances the performance of our model, which is the primary objective of our study/assignement.
 
+Given that an augmented or balanced dataset did not substantially improve results overall, but rather in isolation, the following analysis does not incorporate these new aspects. However, for this final analysis, we have added the development dataset to our training set, which contains both environmental and non-environmental claims. 
+
 __ada__
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/8da79c48-9dc7-43b7-9268-052ca1859ca8">
+
 
 __davinci__
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d498e3a1-31ad-46bc-8d98-ce039f32915c">
 
-Dire qu'on a mis le develpp avec. 
+
+
+
+
+
+ 
 
 mentionner le high recall! 
 
