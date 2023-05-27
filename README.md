@@ -114,7 +114,7 @@ First, upon analyzing the results, an intriguing observation emerges: models bas
 -	Focusing solely on the results from the Word2vec vectorizer, we can see that the results are very low compared to the other vectorizers, and this is true across all classification methods. Even the Word2Vec-Decision Tree combination yields accuracy equivalent to the default rate, meaning that the model predicts all sentences as non-environmental claims. This outcome is reflected in the confusion matrix presented below: 
 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/30b8b58d-5840-4a5f-b857-8aa8fadb75a4">
+<img width="900" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/30b8b58d-5840-4a5f-b857-8aa8fadb75a4">
 
 The precision and recall metrics are calculated based on the number of True Positives predicted by the model. Since all sentences are labeled as 0, it is expected to observe both these metrics equal to 0. 
 
@@ -127,7 +127,7 @@ Why does this model exhibit inferior performance compared to the others? Our ana
 
 __DistilBERT__
 
-Subsequently, we incorporated a DistilBERT -based model. As shown in the previously presented table, this model outperforms the previous analyses overall. Specifically, the combination of DistilBERT with a logistic regression classifier exhibits an accuracy rate of 87.67%, which surpasses our previous best result for that metric.In addition, the DistilBERT-based model excels in terms of recall metrics, achieving the highest score of 70.31%, again with its combination with logistic regression as a classifier. In terms of precision, its combination with logistic regression finishes tied with the Word2Vec and logistic regression combination at 71.43%.
+Subsequently, we incorporated a DistilBERT -based model. As shown in the previously presented table, this model outperforms the previous analyses overall. Specifically, the combination of DistilBERT with a logistic regression classifier exhibits an accuracy rate of 87.67%, which surpasses our previous best result for that metric.In addition, the DistilBERT-based model excels in terms of recall metrics, achieving the highest score of 70.31%, again with its combination with logistic regression as a classifier. In terms of precision, its combination with logistic regression finishes tied with the Word2Vec and logistic regression combination at 71.43%. This makes it the best model so far
 
 A brief exlaination of DistilBERT: 
 DistilBERT, a variant of the Transformer model, offers valuable advantages over its predecessor, BERT base. According to information shared on the [Hugging Face](https://huggingface.co/docs/transformers/model_doc/distilbert) page, it reduces parameter count by about 40%, resulting in significant gains in computational efficiency. Achieving a processing speed that is 60% faster, while maintaining over 95% of BERT's performance levels, DistilBERT therefore has a balance between resource efficiency and model effectiveness. In our comparisons with other groups using more classical versions of Bert, we observed that DistilBERT can sometimes outperformed them in performance metrics. As mentioned during our discussion with Prof. Vlachos, this superiority can be attributed to its capacity to reduce overfitting using a smaller number of parameters. From what we understood, it is more plausible that models with a higher parameter count are more susceptible to overfitting the training data, resulting in inadequate performance when applied to new data.
@@ -191,7 +191,14 @@ __davinci__
 <img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d498e3a1-31ad-46bc-8d98-ce039f32915c">
 
 
+Pour la première fois de l’analyse, l’utilisation de fine-tuning GTP-3 avec le modèle davinci nous permet de dépasser la barre des 90% d’accuracy, ce qui nous fait un bon de 11,33% par raport a notre default rate.
 
+Ce modèle précisement est désormais notre nouveau meilleures modèle. En effet, si l’on compare notre précédent meilleure modèle de la table initiale qui était la combinaison de Logistic regression et DistilBert, notre nouveau modèle le supasse de 2.33% en accuarcy, de 2.18% en précision et de 12.5% en recall. 
+
+Il est tout de même inétéréésant de remarquer que ce nouveau meilleur modèle n’atteint pas le meilleur recall apercu jusqu’à moment. Notamment le modèle avec des dataste balanced a fait appraitre un recall de 85.94%. 
+
+
+Le modèle ada produit également de bon résultas, mais légèrement inférieur à davinci 
 
 
 
