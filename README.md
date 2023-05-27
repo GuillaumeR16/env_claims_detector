@@ -1,4 +1,9 @@
-# Machine Learning - Group Project
+# Final Project Machine Learning (MGT-502) - Corporate Greenwashing
+
+__Contributors:__
+- Guillaume Rico
+- Charlotte Ahrens
+- - Noé Lopez
 
 # Task attribution
 As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
