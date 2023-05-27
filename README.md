@@ -41,7 +41,7 @@ Lastly, we take a look at the research that gives the foundation to our research
 
 Overall, the literature review has shown that many academic papers tackle the issue of greenwashing. To understand the dimension of false claims, these papers mainly focus on the term definition of greenwashing. As there is no clear statement of what practices and wording includes, this term must be consistently adapted due to changing social and technical norms. On the other hand, industry example has shown that there is an increasing demand in order detect and use those claims for the greater good of society when banking decisions investments are made.
 
-# EDA
+# Exploratory Data Analysis (EDA)
 For all the results that follow, these have been created and taken from the following file: EDA.ipynb
 
 In this section, we present the key takeaways obtained from our EDA.
@@ -50,7 +50,7 @@ In this section, we present the key takeaways obtained from our EDA.
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/f2ae0a7b-e461-4fa4-82f9-d60a5d5e6879"> <br>
 
-2. Through a targeted analysis of environmental claims and the use of a selective tokenizer to remove insignificant words, we identified recurring buzzwords associated with environmental claims. The top three “buzzwords”, namely "energy," "environmental," and "reduce," are the most present words in these sentences. As a result, it is plausible that sentences containing these buzzwords in our testing set have a higher likelihood of being classified as environmental claims by our further predictive models.
+2. Through a targeted analysis of environmental claims and the use of a selective tokenizer to remove insignificant words, we identified recurring "buzzwords" associated with environmental claims. The top three buzzwords, namely "energy," "environmental," and "reduce," are the most present words in these sentences. As a result, it is plausible that sentences containing these buzzwords in our testing set have a higher likelihood of being classified as environmental claims by our further predictive models.
 
 <img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/0ba6d398-6507-4b43-b90d-33f319387fa3"> <br>
 
