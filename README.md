@@ -227,7 +227,7 @@ The selected banks for analysis include:
 - Goldman Sachs
 
 
-Our focus initially lies on the two largest Swiss banks (soon one), UBS and Credit Suisse. These banks have been at the forefront of discussions surrounding brown financing in recent years. Additionally, we have chosen Banque Cantonale Vaudoise (BCV) for its local significance within the canton of Vaud. Lastly, our analysis extends beyond Swiss borders to include prominent American banks. For the analysis, we will be examining their respective annual reports for the years 2019 and 2020.
+Our focus initially lies on the two largest Swiss banks (soon one), UBS and Credit Suisse. These banks have been at the forefront of discussions surrounding brown financing in [recent years](https://www.tdg.ch/greenpeace-appelle-ubs-et-credit-suisse-a-agir-350932331335). Additionally, we have chosen Banque Cantonale Vaudoise (BCV) for its local significance within the canton of Vaud. Lastly, our analysis extends beyond Swiss borders to include prominent American banks. For both analysis, we will be examining annual reports for the years 2019 and 2020.
 
 The data related to the climate performance of each bank was obtained from the Trucost database, which was graciously provided by Dr. Boris Thurm. These data served as the basis for calculating the following metrics for each bank:
 
