@@ -70,7 +70,7 @@ In this section, we present the key takeaways obtained from our EDA.
 
 
 # Performance of models
-Disclaimer: among the different models used for predicting environmental claims, the one implemented with the GPT3 davinci model stands out as the best performer in terms of accuracy, precision, and recall, with respectively 90%, 73,61% and 82%. However, the analysis in this model and the ada model will be deferred to a later stage, as they were not constructed from scratch but rather sourced from diverse resources towards the end of our project. In the beginning we want assess and comment the performances of more “in-house” that we have built and fine-tuned. Hence, our initial focus will be directed towards the examination of the following models: 
+Disclaimer: among the different models used for predicting environmental claims, the one implemented with the GPT3 davinci model stands out as the best performer in terms of accuracy, precision, and recall, with respectively 90%, 73,61% and 82%. However, the analysis of this model and the ada model will be deferred to a later stage, as they were not constructed from scratch but rather sourced from diverse resources towards the end of our project. In the beginning we want assess and comment the performances of more “in-house” that we have built and fine-tuned. Hence, our initial focus will be directed towards the examination of the following models: 
 
 - BOW
 -  TF-IDF
