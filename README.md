@@ -191,22 +191,11 @@ __davinci__
 <img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d498e3a1-31ad-46bc-8d98-ce039f32915c">
 
 
-Pour la première fois de l’analyse, l’utilisation de fine-tuning GTP-3 avec le modèle davinci nous permet de dépasser la barre des 90% d’accuracy, ce qui nous fait un bon de 11,33% par raport a notre default rate.
+For the first time in our analysis, the utilization of fine-tuning GPT-3 with the Davinci model has allowed us to achieve an accuracy exceeding 90%. This represents an improvement of 11.33% compared to our default rate and positions this particular model as our new top performer. When comparing it to our previous best model from the initial table, which combined Logistic regression and DistilBert, our new model surpasses it by 2.33% in accuracy, 2.18% in precision, and 12.5% in recall.
 
-Ce modèle précisement est désormais notre nouveau meilleures modèle. En effet, si l’on compare notre précédent meilleure modèle de la table initiale qui était la combinaison de Logistic regression et DistilBert, notre nouveau modèle le supasse de 2.33% en accuarcy, de 2.18% en précision et de 12.5% en recall. 
+This outcome is not unexpected considering the fundamental structure of this model. As disscused in class with Prof. Michalis Vlachos, GPT-3 possesses an extensive parameter capacity, enabling it to effectively capture and comprehend complex patterns and relationships present in the data. This naturally leads to better results. However, it is worth noting that our new best model does not achieve the highest recall observed thus far. The model trained on a balanced tranined demonstrated a recall of 85.94%. The Ada model also delivered promising results, albeit slightly inferior to the Davinci model.
 
-Il est tout de même inétéréésant de remarquer que ce nouveau meilleur modèle n’atteint pas le meilleur recall apercu jusqu’à moment. Notamment le modèle avec des dataste balanced a fait appraitre un recall de 85.94%. 
-
-
-Le modèle ada produit également de bon résultas, mais légèrement inférieur à davinci 
-
-
-
- 
-
-mentionner le high recall! 
-
-Et dire que pour des rasions financières, l'analyse dees rapoorts annuels se fera sur la base du model ada (comparer avec ditilbert et le dernier BOW)
+Based on the consistent performance across all three metrics, we can conclude that the last two models are currently the top performers. Moving forward with our analysis of annual reports from different banks, we have opted to use the ada model instead of davinci due to financial considerations. The davinci model incurs additional costs due to the extensive lines of code that need to be executed.
 
 
 
