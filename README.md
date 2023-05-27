@@ -1,4 +1,4 @@
-# Final Project Machine Learning (MGT-502) - Corporate Greenwashing
+# Final Project Machine Learning (MGT-502) - Towards Sustainability or Greenwashing
 
 __Contributors:__
 - Guillaume Rico
