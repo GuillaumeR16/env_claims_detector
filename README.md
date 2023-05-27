@@ -183,21 +183,23 @@ For all the results that follow, these have been created and taken from the foll
 
 As previously stated in this report, the analysis of two additional models has been postponed until the end of the study. These models, although implemented by us on python, originate more from external sources and utilize GPT-3 Text Classifier with davinci and ada as the chosen models. We refrained from directly comparing these new models to the previously analyzed ones as we acknowledge that our contribution to the establishment of these models within the context of our analysis was not substantial (e.g., no direct fine-tuning and parameter search). Nonetheless, as shown in the confusion matrix below, these two models typically produce the greatest results. This is precisely why we incorporate them into the report, as their inclusion enhances the performance of our model, which is the primary objective of our study/assignement.
 
-Given that an augmented or balanced dataset did not substantially improve results overall, but rather in isolation, the following analysis does not incorporate these new aspects. However, for this final analysis, we have added the development dataset to our training set, which contains both environmental and non-environmental claims. 
+Given that an augmented or balanced dataset did not substantially improve results overall, but rather in isolation, the following analysis does not incorporate these additional aspects. However, for this final analysis, we have added the development dataset to our training set, which contains both environmental and non-environmental claims. 
 
 __ada__
-<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/8da79c48-9dc7-43b7-9268-052ca1859ca8">
+
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/8da79c48-9dc7-43b7-9268-052ca1859ca8"><br>
 
 
 __davinci__
-<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d498e3a1-31ad-46bc-8d98-ce039f32915c">
+
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/d498e3a1-31ad-46bc-8d98-ce039f32915c"><br>
 
 
-For the first time in our analysis, the utilization of fine-tuning GPT-3 with the Davinci model has allowed us to achieve an accuracy exceeding 90%. This represents an improvement of 11.33% compared to our default rate and positions this particular model as our new top performer. When comparing it to our previous best model from the initial table, which combined Logistic regression and DistilBert, our new model surpasses it by 2.33% in accuracy, 2.18% in precision, and 12.5% in recall.
+For the first time in our analysis, the use of fine-tuning GPT-3 with the davinci model has allowed us to achieve an accuracy exceeding 90%. This represents an improvement of 11.33% compared to our default rate and positions this particular model as our new top performer. When comparing it to our previous best model from the initial table, which combined Logistic regression and DistilBert, our new model surpasses it by 2.33% in accuracy, 2.18% in precision, and 12.5% in recall.
 
-This outcome is not unexpected considering the fundamental structure of this model. As disscused in class with Prof. Michalis Vlachos, GPT-3 possesses an extensive parameter capacity, enabling it to effectively capture and comprehend complex patterns and relationships present in the data. This naturally leads to better results. However, it is worth noting that our new best model does not achieve the highest recall observed thus far. The model trained on a balanced tranined demonstrated a recall of 85.94%. The Ada model also delivered promising results, albeit slightly inferior to the Davinci model.
+This outcome is not unexpected considering the fundamental structure of this model. As disscused in class with Prof. Michalis Vlachos, GPT-3 possesses an extensive parameter capacity, enabling it to effectively capture and comprehend complex patterns and relationships present in the data. This naturally leads to better results. However, it is worth noting that our new best model does not achieve the highest recall observed thus far. The model trained on a balanced tranined demonstrated a recall of 85.94%. The ada model also delivered promising results, albeit slightly inferior to the aavinci model.
 
-Based on the consistent performance across all three metrics, we can conclude that the last two models are currently the top performers. Moving forward with our analysis of annual reports from different banks, we have opted to use the ada model instead of davinci due to financial considerations. The davinci model incurs additional costs due to the extensive lines of code that need to be executed.
+Based on the consistent performance across all three metrics, we can conclude that theses last two models are currently the top performers. Moving forward with our analysis of annual reports from different banks, we have opted to use the ada model instead of davinci due to financial considerations. Indeed, the davinci model incurs additional costs due to the extensive lines of code that need to be executed.
 
 
 
