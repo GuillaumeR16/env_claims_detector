@@ -5,6 +5,19 @@ __Contributors:__
 - Charlotte Ahrens
 - Noé Lopez
 
+# Collaborators contribution
+As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
+
+Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the entire exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
+
+Noé took the lead in building the foundation for the text classifier models, which served as a starting point for the team. With his strong coding skills, Guillaume then enhanced and improved the existing models and incorporated GPT-3 into our project. Guillaume also undertook the task of code cleanup, implementing various functions to streamline our notebooks and optimize the overall process, making it more efficient and comprehensible.
+
+When it came to analyzing the annual reports of the bank, Noé formulated the overall strategy for this task and implemented the best model discovered thus far. Noé also constructed the tables used for comparisons between companies within the industry. Guillaume also contributed to this aspect by simplifying and optimizing the code.
+
+In general, tasks were allocated based on each person's expertise and preferences, ensuring an equal distribution of responsibilities. However, it's important to note that all the conclusions drawn from our research were based on group discussions and input from all members.
+
+
+
 # Introduction
 With increasing global warming, companies’ pressure to adapt to new social norms enhances. Most countries signed the Paris Agreement, back in 2015, which includes National Determined Contributions (NDCs), which outline the countries climate actions, mitigation targets and adaptation measures. To fulfill those targets, the industrial sector has a crucial role to play within each country. Therefore, public, governmental, and legal demand plays a key role for companies to comply with the set targets. This has pushed companies to adapt and apply sustainable practices within their firm. While some companies have been first mover within adoption of sustainable and ethical business practices following the Environmental, Social, and Governance (ESG) guidelines, others are trying to take the shortcut and avoid any measurements towards these needs.
 
