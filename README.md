@@ -50,18 +50,22 @@ In this section, we present the key takeaways obtained from our EDA.
 
 1. As can be observed in the image below, the training data set is quite unbalanced in terms of labelled=0 and labelled=1 data. In other words, there is a significant disparity between the number of environmental and non-environmental claims. The same observations can be made for the testing data set. In addition, the default rate in the testing data set is 78.67%. 
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/f2ae0a7b-e461-4fa4-82f9-d60a5d5e6879"> <br>
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114076287/afd9a0e1-abe6-4246-b369-823dc8d354ce"> <br>
+
 
 2. Through a targeted analysis of environmental claims and the use of a selective tokenizer to remove insignificant words, we identified recurring "buzzwords" associated with environmental claims. The top three buzzwords, namely "energy," "environmental," and "reduce," are the most present words in these sentences. As a result, it is plausible that sentences containing these buzzwords in our testing set have a higher likelihood of being classified as environmental claims by our further predictive models.
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/0ba6d398-6507-4b43-b90d-33f319387fa3"> <br>
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114076287/bdd44630-4364-463f-bea5-012a81d77987"> <br>
+
 
 3. When looking at information about years within environmental claims, the main observation are: 
 
 - 2015, 2019 and 2020 show a relative peak in environmental claims. 2015 is likely to be due to the year of the Paris Agreement, meaning several claims where either made in that time or refer to that year within their statement. In terms of the rise in the year 2019 and 2020, it is likely to be mentioned more often due to the time period when the dataset was fed with claims.
 - Years that lay in the future are likely to come from claims that state information about future targets. Such claims may outline plans, strategies, or commitments that organizations or individuals aim to achieve in the future (e.g,, 2030 emissions target)
 
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/b25c01e0-6bc9-419c-82de-22e4cb624e11"> <br>
+<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114076287/a73349e5-ea0f-4f8b-a6e2-7dcea3f12028"> <br>
+
+
 
 
 4. When selecting the claims that are coming from a specific company, the following observations can be made: 
