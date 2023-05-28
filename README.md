@@ -268,9 +268,7 @@ __Analysis 1__
 
 As mentioned previously, in the preliminary analysis, we will assess each chosen bank separately by comparing the variations in their environmental claims over two consecutive years with the corresponding changes in CO2 emissions. This evaluation aims to determine the consistency or disparity between the bank's emphasis on climate change in their annual reports through environmental claims and the actual trend of their CO2 emissions. The table below presents the findings of this analysis.
 
-
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/293af090-bf35-4012-89a3-50a150c290ef"> <br>
-
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114076287/239ef34b-e21c-4244-beb1-c6d311c81e11"> <br>
 
 The first thing to notice is that for all of the selected banks, the number of environmental claims has significantly increased between 2019 and 2020, indicating a growing emphasis on environmental-relatated topics by banks. This observed trend could potentially be attributed to various factors, such as external pressure from stakeholders urging the bank to address environmental concerns in response to their growing societal significance. Alternatively, it may stem from the bank's genuine commitment to align its climate actions. To gain further insights, let us examine the evolution of CO2 emissions.
 
