@@ -3,14 +3,14 @@
 TEST
 
 __Contributors:__
-- Guillaume Rico
-- Charlotte Ahrens
-- Noé Lopez
+- [Guillaume Rico]()
+- [Charlotte Ahrens](https://github.com/Clahrens)
+- [Noé Lopez](https://github.com/noelopez-E4S)
 
 # Collaborators contribution
 As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
 
-Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the entire exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
+Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
 
 Noé took the lead in building the foundation for the text classifier models, which served as a starting point for the team.  Guillaume then enhanced and improved the existing models and incorporated GPT-3 into our project. Guillaume also undertook the task of code cleanup, implementing various functions to streamline our notebooks and optimize the overall process, making it more efficient and comprehensible.
 
@@ -270,9 +270,7 @@ __Analysis 1__
 
 As mentioned previously, in the preliminary analysis, we will assess each chosen bank separately by comparing the variations in their environmental claims over two consecutive years with the corresponding changes in CO2 emissions. This evaluation aims to determine the consistency or disparity between the bank's emphasis on climate change in their annual reports through environmental claims and the actual trend of their CO2 emissions. The table below presents the findings of this analysis.
 
-
-<img width="800" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114017894/293af090-bf35-4012-89a3-50a150c290ef"> <br>
-
+<img width="700" alt="image" src="https://github.com/noelopez-E4S/env_claims_detector/assets/114076287/239ef34b-e21c-4244-beb1-c6d311c81e11"> <br>
 
 The first thing to notice is that for all of the selected banks, the number of environmental claims has significantly increased between 2019 and 2020, indicating a growing emphasis on environmental-relatated topics by banks. This observed trend could potentially be attributed to various factors, such as external pressure from stakeholders urging the bank to address environmental concerns in response to their growing societal significance. Alternatively, it may stem from the bank's genuine commitment to align its climate actions. To gain further insights, let us examine the evolution of CO2 emissions.
 
@@ -326,6 +324,8 @@ Again, it is important to note that this conclusion is drawn from a limited samp
 - **Greenwashing ?** : In summary, this model proves to be highly effective at assessing environmental claims but cannot directly determine greenwashing. To address this, the user has to conduct a comprehensive comparison across various environmental metrics such as C02 emissions, CO2 intensity, and others. Although this presents challenges, it would be intriguing to develop a model specifically designed to detect greenwashing directly. One approach could involve researchers concentrating on companies known to engage in greenwashing and labeling specific “greenwashing claims” in their reports. Indeed, it is possible that certain words regularly appear in the annual reports of companies involved in greenwashing practices. However, creating such a model would also carry legal risks, as accusing a company of greenwashing is a serious matter, as demonstrated by the [DWS](https://www.reuters.com/business/finance/deutsche-banks-dws-sued-by-consumer-group-over-alleged-greenwashing-2022-10-24/) case last year. Hence, this model would need human verification given the fine line between greenwashing and genuine climate ambitions, which makes the detection task even more challenging.
 
 ## Conclusion
+In conclusion, the research contributes to a better understanding of the extent to which companies in the banking sector are publicly outspoken while simultaneously incorporating climate-related actions. Companies’ environmental claims can be misleading for the public since their words are not always followed by actions in terms of carbon reduction. While Swiss players are announcing sustainable actions in much higher quantity than their US counterparts, we understand the needs of Swiss citizens and their expectations from their banking industry. While the amount of environmental claim statements is mainly coherent with the bank’s carbon intensity, one key outlier is shown to be UBS, one of the biggest and most influential banks in Switzerland. Although there is much talk about sustainability topics from UBS, little promise has been made based on carbon emission reduction within the years 2019 and 2020. 
 
-STILL NEED TO BE DONE !! BUT is it really needed ?? to be disscused with the team
+Even though the model has its limitations in terms of accuracy and sector specificity; building, training, and testing a robust text classifier model to detect environmental claims is impactful and of current need for society. Through assessing banks' annual reports, we make a valuable step towards promoting transparency, accountability, and sustainability within the corporate sector. This analysis can help stakeholders, including investors, policymakers, and the general public, to make informed decisions and hold companies accountable for their climate-related commitments to build a green tomorrow.
+
 
