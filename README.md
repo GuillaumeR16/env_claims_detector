@@ -1,14 +1,14 @@
 # Final Project Machine Learning (MGT-502) - Towards Sustainability or Greenwashing
 
 __Contributors:__
-- Guillaume Rico
-- Charlotte Ahrens
-- Noé Lopez
+- [Guillaume Rico]()
+- [Charlotte Ahrens](https://github.com/Clahrens)
+- [Noé Lopez](https://github.com/noelopez-E4S)
 
 # Collaborators contribution
 As part of the present analysis, each team member has made significant and consistent contributions across various aspects of the project.
 
-Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the entire exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
+Charlotte played a proactive role in the development of the research question and conducted an extensive literature review. Additionally, she was responsible for the exploratory data analysis (EDA) phase, which provided valuable insights for our research direction and endpoint analysis.
 
 Noé took the lead in building the foundation for the text classifier models, which served as a starting point for the team.  Guillaume then enhanced and improved the existing models and incorporated GPT-3 into our project. Guillaume also undertook the task of code cleanup, implementing various functions to streamline our notebooks and optimize the overall process, making it more efficient and comprehensible.
 
@@ -43,7 +43,7 @@ Lastly, we take a look at the research that gives the foundation to our research
 Overall, the literature review has shown that many academic papers tackle the issue of greenwashing. To understand the dimension of false claims, these papers mainly focus on the term definition of greenwashing. As there is no clear statement of what practices and wording includes, this term must be consistently adapted due to changing social and technical norms. On the other hand, industry example has shown that there is an increasing demand in order detect and use those claims for the greater good of society when banking decisions investments are made.
 
 # Exploratory Data Analysis (EDA)
-For all the results that follow, these have been created and taken from the following file: [EDA.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/EDA.ipynb)
+For all the results that follow, these have been created and taken from the following file: EDA.ipynb
 
 In this section, we present the key takeaways obtained from our EDA.
 
@@ -85,7 +85,7 @@ Furthermore, all of these models have been evaluated using the following classif
 - and Random Forest
 
 
-In the end, we have a total of 20 models to analyze, each with three performance metrics. All of the models have undergone fine-tuning. You can find the code and details of the fine-tuning process for all the models in the following notebook: [model_prediction.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/model_prediction.ipynb)
+In the end, we have a total of 20 models to analyze, each with three performance metrics. All of the models have undergone fine-tuning. You can find the code and details of the fine-tuning process for all the models in the following notebook: model_prediction.ipynb
 
 
 The performance of each model is assessed based on three key metrics: accuracy, precision, and recall. Before delving into a detailed analysis of these metrics, let's recap their significance in the context of environmental claim detection:
@@ -139,7 +139,7 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 
 
 ## Augmented dataset
-For all the results that follow, these have been created and taken from the following file: [models_prediction_augmented.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/model_prediction_augmented.ipynb)
+For all the results that follow, these have been created and taken from the following file: models_prediction_augmented.ipynb
 
 After conducting a thorough analysis on enhancing our models through the incorporation of diverse classifiers and vectorizers, as well as fine-tuning each model individually, we aimed to investigate the impact of improving the initial dataset on performance metrics. In light of this, leveraging chatGPT's assistance, we supplemented our testing dataset with an additional 415 environmental claims. Once the size of our training data set was increased, we proceeded to run the same models as before, but this time on the newly expanded dataset. 
 
@@ -159,7 +159,7 @@ Similar to the previous findings, the recall measurements remain quite low, arou
 To further improve our performance metrics via dataset modification, we are taking the next step by using not only an expanded dataset but also ensuring its balance (i.e., same observation per class).
 
 ## Augmented & Balanced dataset
-For all the results that follow, these have been created and taken from the following file: [models_prediction_balanced.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/model_prediction_balanced.ipynb)
+For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
 
 As previously mentioned, this section will now use a balanced dataset. To do this, we ensured that the number of environmental and non-environmental claims was equal within our training set. On this basis, we removed 901 non-environmental claims to obtain a balanced dataset with 957 sentences per class. 
 
@@ -178,7 +178,7 @@ However, two notable observations stand out:
 
 
 ## GPT-3 Text Classifier 
-For all the results that follow, these have been created and taken from the following file: [GPT_3_finetuning_ada.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/GPT_3_finetuning_ada.ipynb) and [GPT_3_finetuning_davinci.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/GPT_3_finetuning_davinci.ipynb)
+For all the results that follow, these have been created and taken from the following file: GPT_3_finetuning_ada.ipynb & GPT_3_finetuning_davinci.ipynb
 
 
 As previously stated in this report, the analysis of two additional models has been postponed until the end of the study. These models, although implemented by us on python, originate more from external sources and utilize GPT-3 Text Classifier with davinci and ada as the chosen models. We refrained from directly comparing these new models to the previously analyzed ones as we acknowledge that our contribution to the establishment of these models within the context of our analysis was not substantial (e.g., no direct fine-tuning and parameter search). Nonetheless, as shown in the confusion matrix below, these two models typically produce the greatest results. This is precisely why we incorporate them into the report, as their inclusion enhances the performance of our model, which is the primary objective of our study/assignement.
@@ -244,7 +244,7 @@ Finally, during the extraction of text from the various annual reports, we focus
 
 
 ## Result
-For all the results that follow these have been created and taken from the following file: [banks_reports.ipynb](https://github.com/noelopez-E4S/env_claims_detector/blob/main/banks_reports.ipynb)
+For all the results that follow these have been created and taken from the following file: banks_reports.ipynb
 
 __Examples__
 
@@ -322,6 +322,8 @@ Again, it is important to note that this conclusion is drawn from a limited samp
 - **Greenwashing ?** : In summary, this model proves to be highly effective at assessing environmental claims but cannot directly determine greenwashing. To address this, the user has to conduct a comprehensive comparison across various environmental metrics such as C02 emissions, CO2 intensity, and others. Although this presents challenges, it would be intriguing to develop a model specifically designed to detect greenwashing directly. One approach could involve researchers concentrating on companies known to engage in greenwashing and labeling specific “greenwashing claims” in their reports. Indeed, it is possible that certain words regularly appear in the annual reports of companies involved in greenwashing practices. However, creating such a model would also carry legal risks, as accusing a company of greenwashing is a serious matter, as demonstrated by the [DWS](https://www.reuters.com/business/finance/deutsche-banks-dws-sued-by-consumer-group-over-alleged-greenwashing-2022-10-24/) case last year. Hence, this model would need human verification given the fine line between greenwashing and genuine climate ambitions, which makes the detection task even more challenging.
 
 ## Conclusion
+In conclusion, the research contributes to a better understanding of the extent to which companies in the banking sector are publicly outspoken while simultaneously incorporating climate-related actions. Companies’ environmental claims can be misleading for the public since their words are not always followed by actions in terms of carbon reduction. While Swiss players are announcing sustainable actions in much higher quantity than their US counterparts, we understand the needs of Swiss citizens and their expectations from their banking industry. While the amount of environmental claim statements is mainly coherent with the bank’s carbon intensity, one key outlier is shown to be UBS, one of the biggest and most influential banks in Switzerland. Although there is much talk about sustainability topics from UBS, little promise has been made based on carbon emission reduction within the years 2019 and 2020. 
 
-STILL NEED TO BE DONE !! BUT is it really needed ?? to be disscused with the team
+Even though the model has its limitations in terms of accuracy and sector specificity; building, training, and testing a robust text classifier model to detect environmental claims is impactful and of current need for society. Through assessing banks' annual reports, we make a valuable step towards promoting transparency, accountability, and sustainability within the corporate sector. This analysis can help stakeholders, including investors, policymakers, and the general public, to make informed decisions and hold companies accountable for their climate-related commitments to build a green tomorrow.
+
 
