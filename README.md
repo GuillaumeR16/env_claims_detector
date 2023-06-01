@@ -143,13 +143,13 @@ In addition, DistilBERT stands out from the other vectorization methods we have 
 
 
 ## Augmented dataset
-For all the results that follow, these have been created and taken from the following file: models_prediction_augmented.ipynb
+All the results that follow have been created and taken from the following file: models_prediction_augmented.ipynb
 
 After conducting a thorough analysis on enhancing our models through the incorporation of diverse classifiers and vectorizers, as well as fine-tuning each model individually, we aimed to investigate the impact of improving the initial dataset on performance metrics. In light of this, leveraging chatGPT's assistance, we supplemented our testing dataset with an additional 415 environmental claims. Once the size of our training data set was increased, we proceeded to run the same models as before, but this time on the newly expanded dataset. 
 
 But before examining the outcomes, in what way can the inclusion of additional data improve the performance of a model?
 - More learning examples: A larger dataset provides more sentences labeled as environmental claims for the model to learn from, helping it understand the patterns and characteristics of such claims. Therefore, our different models may improve at recognizing what truly differentiate environmental claims from non-environmental ones.
-- Better feature representation: With an increased number of environmental claims in the dataset, the model becomes familiar with a wider range of sentence structures, wording, and contextual information associated with environmental claims. Hence, when faced with new unseen sentences, our different models may be better as labelling them as environmental claims or not accurately.
+- Better feature representation: With an increased number of environmental claims in the dataset, the model becomes familiar with a wider range of sentence structures, wording, and contextual information associated with environmental claims. Hence, when faced with new unseen sentences, our different models may be better at labelling them as environmental claims or not accurately.
 
 Now, let's examine the results of our models using this expanded dataset and determine if it has genuinely improved the performance metrics, as suggested by the reasons above.
 
@@ -158,16 +158,16 @@ Now, let's examine the results of our models using this expanded dataset and det
 
 In comparison to the previous table, there are no significant improvements observed. The DistilBert and Logistic combination still achieves the highest accuracy score of 87.67%. Again, this combination also stands out as the best model in terms of precision and recall metrics.
 
-Similar to the previous findings, the recall measurements remain quite low, around 50%. This is concerning for of our study, as it indicates that our model can only identify 50% of the environmental claims present in the sentence corpus. This limitation poses a risk in drawing false conclusions from our analysis of bank annual reports, as the model may miss a substantial number of actual environmental claims documented in these reports. Consequently, using such models could potentially result in a significant underestimation of the environmental ambitions communicated by the banks.
+Similar to the previous findings, the recall measurements remain quite low, around 50%. This is concerning for our study, as it indicates that our model can only identify 50% of the environmental claims present in the sentence corpus. This limitation poses a risk in drawing false conclusions from our analysis of bank annual reports, as the model may miss a substantial number of actual environmental claims documented in these reports. Consequently, using such models could potentially result in a significant underestimation of the environmental ambitions communicated by the banks.
 
 To further improve our performance metrics via dataset modification, we are taking the next step by using not only an expanded dataset but also ensuring its balance (i.e., same observation per class).
 
 ## Augmented & Balanced dataset
-For all the results that follow, these have been created and taken from the following file: models_prediction_balanced.ipynb
+All the results that follow have been created and taken from the following file: models_prediction_balanced.ipynb
 
 As previously mentioned, this section will now use a balanced dataset. To do this, we ensured that the number of environmental and non-environmental claims was equal within our training set. On this basis, we removed 901 non-environmental claims to obtain a balanced dataset with 957 sentences per class. 
 
-As we have seen in class with Prof. Michalis Vlachos, better performance metrics can be achieved through a balanced dataset thanks to an avoidance of biases. Indeed, when the we have an unequal number of observations per class, the model might become biased towards the majority class. In our case, since they were more non-environmental claims than environmental claims in the beginning (see EDA), the model may has focused more on learning patterns related to non-environmental claims and struggle to accurately identify environmental claims. 
+As we have seen in class with Prof. Michalis Vlachos, better performance metrics can be achieved through a balanced dataset thanks to an avoidance of biases. Indeed, when we have an unequal number of observations per class, the model might become biased towards the majority class. In our case, since they were more non-environmental claims than environmental claims in the beginning (see EDA), the model may have focused more on learning patterns related to non-environmental claims and struggle to accurately identify environmental claims. 
 
 Now, let's see if having a balanced dataset is improving the performance metrics !
 
@@ -182,8 +182,7 @@ However, two notable observations stand out:
 
 
 ## GPT-3 Text Classifier 
-For all the results that follow, these have been created and taken from the following file: GPT_3_finetuning_ada.ipynb & GPT_3_finetuning_davinci.ipynb
-
+All the results that follow have been created and taken from the following files: GPT_3_finetuning_ada.ipynb & GPT_3_finetuning_davinci.ipynb
 
 As previously stated in this report, the analysis of two additional models has been postponed until the end of the study. These models, although implemented by us on python, originate more from external sources and utilize GPT-3 Text Classifier with davinci and ada as the chosen models. We refrained from directly comparing these new models to the previously analyzed ones as we acknowledge that our contribution to the establishment of these models within the context of our analysis was not substantial (e.g., no direct fine-tuning and parameter search). Nonetheless, as shown in the confusion matrix below, these two models typically produce the greatest results. This is precisely why we incorporate them into the report, as their inclusion enhances the performance of our model, which is the primary objective of our study/assignment.
 
@@ -201,10 +200,9 @@ __davinci__
 
 For the first time in our analysis, the use of fine-tuning GPT-3 with the davinci model has allowed us to achieve an accuracy exceeding 90%. This represents an improvement of 11.33% compared to our default rate and positions this particular model as our new top performer. When comparing it to our previous best model from the initial table, which combined Logistic regression and DistilBert, our new model surpasses it by 2.33% in accuracy, 2.18% in precision, and 12.5% in recall.
 
-This outcome is not unexpected considering the fundamental structure of this model. As discussed in class with Prof. Michalis Vlachos, GPT-3 possesses an extensive parameter capacity, enabling it to effectively capture and comprehend complex patterns and relationships present in the data. This naturally leads to better results. However, it is worth noting that our new best model does not achieve the highest recall observed thus far. The model trained on a balanced trained demonstrated a recall of 85.94%. The ada model also delivered promising results, albeit slightly inferior to the davinci model.
+This outcome is not unexpected considering the fundamental structure of this model. As discussed in class with Prof. Michalis Vlachos, GPT-3 possesses an extensive parameter capacity, enabling it to effectively capture and comprehend complex patterns and relationships present in the data. This naturally leads to better results. However, it is worth noting that our new best model does not achieve the highest recall observed thus far. The model trained on a balanced dataset demonstrated a recall of 85.94%. The ada model also delivered promising results, albeit slightly inferior to the davinci model.
 
-Based on the consistent performance across all three metrics, we can conclude that theses last two models are currently the top performers. Moving forward with our analysis of annual reports from different banks, we have opted to use the ada model instead of davinci due to financial considerations. Indeed, the davinci model incurs additional costs due to the extensive lines of code that need to be executed.
-
+Based on the consistent performances across all three metrics, we can conclude that theses last two models are currently the top performers. Moving forward with our analysis of annual reports from different banks, we have opted to use the ada model instead of davinci due to financial considerations. Indeed, using the davinci model for our annual reports' analysis would induce quite important costs for us based on Openai cost structure.
 
 
 # Analysis on annual reports:
